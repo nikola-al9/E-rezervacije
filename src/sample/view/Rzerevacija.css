@@ -1,0 +1,17 @@
+
+#AnchorPane{
+    -fx-background-image:url("people.jpg");
+    -fx-background-repeat: no-repeat;
+}
+.label{
+
+    -fx-font-family: "Book Antiqua";
+    -fx-font-weight: bold;
+
+}
+
+.button{
+    -fx-text-fill: black;
+    -fx-font-family:"Book Antiqua";
+    -fx-background-color:  white;
+}

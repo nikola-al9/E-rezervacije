@@ -1,0 +1,23 @@
+.mainFxmlClass{
+
+}
+
+.root {
+    -fx-background-color: ghostwhite;
+}
+.label{
+
+}
+#Poruka{
+
+}
+.button{
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+    -fx-background-color:  #76a0ef;
+}
+.button:hover {
+    -fx-background-color: cornflowerblue ;
+}
+

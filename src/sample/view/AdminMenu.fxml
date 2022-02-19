@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" minWidth="583.0" prefHeight="674.9999000000025" prefWidth="721.0001220703125" styleClass="mainFxmlClass, root" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.AdminMenuController">
+    <children>
+        <Button layoutX="639.0" layoutY="21.0" mnemonicParsing="false" onAction="#Odjava" text="Odjava" />
+        <TabPane id="menu" layoutX="14.0" layoutY="57.0" prefHeight="618.0" prefWidth="694.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab onSelectionChanged="#listaOsoba" text="Korisnik">
+                    <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="555.0" prefWidth="750.0">
+                            <children>
+                                <Label layoutX="39.0" layoutY="76.0" prefHeight="26.0" prefWidth="47.0" text="ID:" textAlignment="LEFT" textFill="#0c2844" textOverrun="CLIP" underline="false">
+                                    <font>
+                                        <Font name="Book Antiqua" size="18.0" />
+                                    </font></Label>
+                                <Label layoutX="39.0" layoutY="122.0" prefHeight="20.0" prefWidth="54.0" text="Ime:" textFill="#0c2844" underline="false">
+                                    <font>
+                                        <Font name="Book Antiqua" size="20.0" />
+                                    </font></Label>
+                                <Label layoutX="39.0" layoutY="170.0" text="Prezime:" textFill="#0c2844" underline="false">
+                                    <font>
+                                        <Font name="Book Antiqua" size="18.0" />
+                                    </font></Label>
+                                <Label layoutX="39.0" layoutY="215.0" text="JMBG:" textFill="#0c2844" underline="false">
+                                    <font>
+                                        <Font name="Book Antiqua" size="18.0" />
+                                    </font></Label>
+                                <Label layoutX="39.0" layoutY="260.0" text="Email:" textFill="#0c2844" underline="false">
+                                    <font>
+                                        <Font name="Book Antiqua" size="18.0" />
+                                    </font></Label>
+                                <Label layoutX="39.0" layoutY="305.0" text="Telefon:" textFill="#0c2844" underline="false">
+                                    <font>
+                                        <Font name="Book Antiqua" size="18.0" />
+                                    </font></Label>
+                                <Label layoutX="350.0" layoutY="215.0" text="Tip korisnika:" textFill="#0c2844ed" underline="false">
+                                    <font>
+                                        <Font name="Book Antiqua" size="18.0" />
+                                    </font></Label>
+                                <Label layoutX="340.0" layoutY="260.0" text="Korisničko ime:" textFill="#0c2844" underline="false">
+                                    <font>
+                                        <Font name="Book Antiqua" size="18.0" />
+                                    </font></Label>
+                                <Label layoutX="360.0" layoutY="305.0" text="Lozinka:" textFill="#0c2844" underline="false">
+                                    <font>
+                                        <Font name="Book Antiqua" size="18.0" />
+                                    </font></Label>
+                                <TextField fx:id="jIDK" layoutX="110.0" layoutY="75.0" prefHeight="28" prefWidth="185.0" />
+                                <TextField fx:id="jImeK" layoutX="110.0" layoutY="120.0" prefHeight="28" prefWidth="185.0" />
+                                <TextField fx:id="jPrezimeK" layoutX="110.0" layoutY="165.0" prefHeight="28" prefWidth="185.0" />
+                                <TextField fx:id="jJMBGK" layoutX="110.0" layoutY="210.0" prefHeight="28.0" prefWidth="185.0" />
+                                <TextField fx:id="jEmailK" layoutX="110.0" layoutY="255.0" prefHeight="28" prefWidth="185.0" />
+                                <TextField fx:id="jTelefonK" layoutX="110.0" layoutY="300.0" prefHeight="28" prefWidth="185.0" />
+                                <TextField fx:id="jTipK" layoutX="480.0" layoutY="210.0" prefHeight="28.0" prefWidth="185.0" />
+                                <TextField fx:id="jKImeK" layoutX="480.0" layoutY="255.0" prefHeight="28.0" prefWidth="185.0" />
+                                <TextField fx:id="jLozinkaK" layoutX="480.0" layoutY="300.0" prefHeight="28" prefWidth="185.0" />
+                                <TableView fx:id="jTableK" layoutX="14.0" layoutY="344.0" onMouseClicked="#postaviPodatkeUCelijeO" prefHeight="228.0" prefWidth="665.0">
+                                    <columns>
+                                        <TableColumn fx:id="ColumnIDK" maxWidth="5000.0" minWidth="10.0" prefWidth="50.0" text="ID" />
+                                        <TableColumn fx:id="ColumnImeK" maxWidth="5000.0" minWidth="10.0" prefWidth="80.0" text="Ime" />
+                                        <TableColumn fx:id="ColumnPrezimeK" maxWidth="5000.0" minWidth="10.0" prefWidth="80.0" text="Prezime" />
+                                        <TableColumn fx:id="ColumnJMBGK" maxWidth="5000.0" minWidth="10.0" prefWidth="96.0" text="JMBG" />
+                                        <TableColumn fx:id="ColumnEmailK" maxWidth="5000.0" minWidth="10.0" prefWidth="110.0" text="Email" />
+                                        <TableColumn fx:id="ColumnTelefonK" maxWidth="5000.0" minWidth="10.0" prefWidth="72.0" text="Telefon" />
+                                        <TableColumn fx:id="ColumnKImeK" maxWidth="5000.0" minWidth="10.0" prefWidth="105.0" text="Korisničko ime" />
+                                        <TableColumn fx:id="ColumnLozinkaK" prefWidth="75.0" text="Lozinka" />
+                                    </columns>
+                                </TableView>
+                                <Button layoutX="324.0" layoutY="27.0" mnemonicParsing="false" onAction="#IsprazniPoljaO" text="Isprazni odabir" />
+                                <Button layoutX="16.0" layoutY="27.0" mnemonicParsing="false" onAction="#DodajO" text="Dodaj korisnika" />
+                                <Button layoutX="143.0" layoutY="27.0" mnemonicParsing="false" onAction="#UrediO" text="Uredi" />
+                                <Button layoutX="228.0" layoutY="27.0" mnemonicParsing="false" onAction="#ObrisiO" text="Izbriši" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+    <stylesheets>
+        <URL value="@adminMenu.css" />
+    </stylesheets>
+    <styleClass>
+    </styleClass>
+
+</AnchorPane>
