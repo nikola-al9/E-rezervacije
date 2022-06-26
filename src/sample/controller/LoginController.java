@@ -12,6 +12,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import sample.model.Osoba;
+import sample.model.Rezervacija;
+
 import java.io.IOException;
 import java.net.URL;
 import java.sql.PreparedStatement;
@@ -22,6 +25,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class LoginController implements Initializable {
+
     @FXML
     TextField jUsername;
 
@@ -36,24 +40,32 @@ public class LoginController implements Initializable {
         Baza db = new Baza();
         String username = this.jUsername.getText();
         String password = this.jPassword.getText();
-        String sql = "select * from osoba where Ime=? and Lozinka=?";
+        String sql = "select type from osoba where username=? and password=?";
+        System.out.println(username + password);
         try{
             PreparedStatement ps = db.exec(sql);
             ps.setString(1, jUsername.getText());
             ps.setString(2, jPassword.getText());
             ResultSet rs = ps.executeQuery();
+            rs.next();
 
-            if(username.contains("admin") && password.contains("admin")){
+            //OVO
+
+//            if (!rs.next()){
+//                Poruka.setText("Invalid username and/or password");
+//            }
+
+             if(Objects.equals(rs.getInt("type"), 1)){
                 ((Node)event.getSource()).getScene().getWindow().hide();
                 Parent root;
-                 root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/view/adminMenu.fxml")));
+                 root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample/view/AdminMenu.fxml")));
                 Stage stage = new Stage();
                 stage.setTitle("Admin menu");
                 stage.setScene(new Scene(root,721,675));
                 stage.show();
 
             }
-            else if(rs.next()){
+            else if((Objects.equals(rs.getInt("type"), 2))){
                 ((Node)event.getSource()).getScene().getWindow().hide();
 
                 FXMLLoader Loader = new FXMLLoader();
@@ -63,9 +75,9 @@ public class LoginController implements Initializable {
                 } catch(IOException ex){
                     Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
                 }
-              RezervacijaController ime = Loader.getController();
-
-                //ime.setIme(username);
+                RezervacijaController ime = Loader.getController();
+//                RezervacijaController immm = new RezervacijaController();
+//                immm.setIme(jUsername.getText());
 
                 Stage stage = new Stage();
                 stage.setTitle("Izbornik");
@@ -76,14 +88,16 @@ public class LoginController implements Initializable {
 
             }
 
-            else{
-
-                Poruka.setText("Invalid username & password");
-
-            }
+//            else if{
+//                //OVO POPRAVI
+//                Poruka.setText("Invalid username and/or password");
+//
+//            }
         }
         catch(Exception e){
             Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE,null,e);
+            Poruka.setText("Invalid username and/or password");
+
 
         }
     }

@@ -6,6 +6,8 @@
 package sample;
 
 import java.io.IOException;
+import java.util.Objects;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,7 +19,7 @@ public class Program extends Application {
     }
 
     public void start(Stage stage) throws IOException {
-        Parent root = (Parent)FXMLLoader.load(this.getClass().getResource("view/login.fxml"));
+        Parent root = (Parent)FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource("view/login.fxml")));
         Scene scene = new Scene(root, 370.0D, 250.0D);
         stage.setTitle("Prijava");
         stage.setScene(scene);

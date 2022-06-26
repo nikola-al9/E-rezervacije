@@ -2,6 +2,7 @@
 #AnchorPane{
     -fx-background-image:url("people.jpg");
     -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
 }
 .label{
 

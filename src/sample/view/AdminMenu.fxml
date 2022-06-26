@@ -5,61 +5,55 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" minWidth="583.0" prefHeight="674.9999000000025" prefWidth="721.0001220703125" styleClass="mainFxmlClass, root" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.AdminMenuController">
+<AnchorPane id="AnchorPane" minWidth="583.0" prefHeight="674.9999000000025" prefWidth="721.0001220703125" styleClass="mainFxmlClass, root" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.AdminMenuController">
     <children>
-        <Button layoutX="639.0" layoutY="21.0" mnemonicParsing="false" onAction="#Odjava" text="Odjava" />
-        <TabPane id="menu" layoutX="14.0" layoutY="57.0" prefHeight="618.0" prefWidth="694.0" tabClosingPolicy="UNAVAILABLE">
+        <TabPane id="menu" layoutX="14.0" layoutY="7.0" prefHeight="668.0" prefWidth="694.0" tabClosingPolicy="UNAVAILABLE">
             <tabs>
                 <Tab onSelectionChanged="#listaOsoba" text="Korisnik">
                     <content>
-                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="555.0" prefWidth="750.0">
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="611.0" prefWidth="694.0">
                             <children>
-                                <Label layoutX="39.0" layoutY="76.0" prefHeight="26.0" prefWidth="47.0" text="ID:" textAlignment="LEFT" textFill="#0c2844" textOverrun="CLIP" underline="false">
-                                    <font>
-                                        <Font name="Book Antiqua" size="18.0" />
-                                    </font></Label>
-                                <Label layoutX="39.0" layoutY="122.0" prefHeight="20.0" prefWidth="54.0" text="Ime:" textFill="#0c2844" underline="false">
+                                <Label layoutX="55.0" layoutY="68.0" prefHeight="38.0" prefWidth="55.0" text="Ime:" textFill="#0c2844" underline="false">
                                     <font>
                                         <Font name="Book Antiqua" size="20.0" />
                                     </font></Label>
-                                <Label layoutX="39.0" layoutY="170.0" text="Prezime:" textFill="#0c2844" underline="false">
+                                <Label layoutX="14.0" layoutY="118.0" prefHeight="35.0" prefWidth="90.0" text="Prezime:" textFill="#0c2844" underline="false">
                                     <font>
                                         <Font name="Book Antiqua" size="18.0" />
                                     </font></Label>
-                                <Label layoutX="39.0" layoutY="215.0" text="JMBG:" textFill="#0c2844" underline="false">
+                                <Label layoutX="39.0" layoutY="158.0" prefHeight="40.0" prefWidth="61.0" text="JMBG:" textFill="#0c2844" underline="false">
                                     <font>
                                         <Font name="Book Antiqua" size="18.0" />
                                     </font></Label>
-                                <Label layoutX="39.0" layoutY="260.0" text="Email:" textFill="#0c2844" underline="false">
+                                <Label layoutX="392.0" layoutY="79.0" text="Email:" textFill="#0c2844" underline="false">
                                     <font>
                                         <Font name="Book Antiqua" size="18.0" />
                                     </font></Label>
-                                <Label layoutX="39.0" layoutY="305.0" text="Telefon:" textFill="#0c2844" underline="false">
+                                <Label layoutX="371.0" layoutY="124.0" text="Telefon:" textFill="#0c2844" underline="false">
                                     <font>
                                         <Font name="Book Antiqua" size="18.0" />
                                     </font></Label>
-                                <Label layoutX="350.0" layoutY="215.0" text="Tip korisnika:" textFill="#0c2844ed" underline="false">
+                                <Label layoutX="315.0" layoutY="170.0" prefHeight="24.0" prefWidth="155.0" text="Tip korisnika:" textFill="#0c2844ed" underline="false">
                                     <font>
                                         <Font name="Book Antiqua" size="18.0" />
                                     </font></Label>
-                                <Label layoutX="340.0" layoutY="260.0" text="Korisničko ime:" textFill="#0c2844" underline="false">
+                                <Label layoutX="311.0" layoutY="215.0" prefHeight="24.0" prefWidth="159.0" text="Korisničko ime:" textFill="#0c2844" underline="false">
                                     <font>
                                         <Font name="Book Antiqua" size="18.0" />
                                     </font></Label>
-                                <Label layoutX="360.0" layoutY="305.0" text="Lozinka:" textFill="#0c2844" underline="false">
+                                <Label layoutX="21.0" layoutY="197.0" prefHeight="58.0" prefWidth="94.0" text="Lozinka:" textFill="#0c2844" underline="false">
                                     <font>
                                         <Font name="Book Antiqua" size="18.0" />
                                     </font></Label>
-                                <TextField fx:id="jIDK" layoutX="110.0" layoutY="75.0" prefHeight="28" prefWidth="185.0" />
-                                <TextField fx:id="jImeK" layoutX="110.0" layoutY="120.0" prefHeight="28" prefWidth="185.0" />
-                                <TextField fx:id="jPrezimeK" layoutX="110.0" layoutY="165.0" prefHeight="28" prefWidth="185.0" />
-                                <TextField fx:id="jJMBGK" layoutX="110.0" layoutY="210.0" prefHeight="28.0" prefWidth="185.0" />
-                                <TextField fx:id="jEmailK" layoutX="110.0" layoutY="255.0" prefHeight="28" prefWidth="185.0" />
-                                <TextField fx:id="jTelefonK" layoutX="110.0" layoutY="300.0" prefHeight="28" prefWidth="185.0" />
-                                <TextField fx:id="jTipK" layoutX="480.0" layoutY="210.0" prefHeight="28.0" prefWidth="185.0" />
-                                <TextField fx:id="jKImeK" layoutX="480.0" layoutY="255.0" prefHeight="28.0" prefWidth="185.0" />
-                                <TextField fx:id="jLozinkaK" layoutX="480.0" layoutY="300.0" prefHeight="28" prefWidth="185.0" />
-                                <TableView fx:id="jTableK" layoutX="14.0" layoutY="344.0" onMouseClicked="#postaviPodatkeUCelijeO" prefHeight="228.0" prefWidth="665.0">
+                                <TextField fx:id="jImeK" layoutX="110.0" layoutY="74.0" prefHeight="30.0" prefWidth="185.0" />
+                                <TextField fx:id="jPrezimeK" layoutX="110.0" layoutY="120.0" prefHeight="30.0" prefWidth="185.0" />
+                                <TextField fx:id="jJMBGK" layoutX="110.0" layoutY="163.0" prefHeight="28.0" prefWidth="185.0" />
+                                <TextField fx:id="jEmailK" layoutX="468.0" layoutY="76.0" prefHeight="28" prefWidth="185.0" />
+                                <TextField fx:id="jTelefonK" layoutX="468.0" layoutY="120.0" prefHeight="28" prefWidth="185.0" />
+                                <TextField fx:id="jTipK" layoutX="468.0" layoutY="168.0" prefHeight="28.0" prefWidth="185.0" />
+                                <TextField fx:id="jKImeK" layoutX="468.0" layoutY="213.0" prefHeight="28.0" prefWidth="185.0" />
+                                <TextField fx:id="jLozinkaK" layoutX="109.0" layoutY="210.0" prefHeight="27.0" prefWidth="187.0" />
+                                <TableView fx:id="jTableK" layoutX="15.0" layoutY="319.0" onMouseClicked="#postaviPodatkeUCelijeO" prefHeight="281.0" prefWidth="665.0">
                                     <columns>
                                         <TableColumn fx:id="ColumnIDK" maxWidth="5000.0" minWidth="10.0" prefWidth="50.0" text="ID" />
                                         <TableColumn fx:id="ColumnImeK" maxWidth="5000.0" minWidth="10.0" prefWidth="80.0" text="Ime" />
@@ -71,10 +65,52 @@
                                         <TableColumn fx:id="ColumnLozinkaK" prefWidth="75.0" text="Lozinka" />
                                     </columns>
                                 </TableView>
-                                <Button layoutX="324.0" layoutY="27.0" mnemonicParsing="false" onAction="#IsprazniPoljaO" text="Isprazni odabir" />
-                                <Button layoutX="16.0" layoutY="27.0" mnemonicParsing="false" onAction="#DodajO" text="Dodaj korisnika" />
-                                <Button layoutX="143.0" layoutY="27.0" mnemonicParsing="false" onAction="#UrediO" text="Uredi" />
-                                <Button layoutX="228.0" layoutY="27.0" mnemonicParsing="false" onAction="#ObrisiO" text="Izbriši" />
+                                <Button layoutX="431.0" layoutY="27.0" mnemonicParsing="false" onAction="#IsprazniPoljaO" text="Isprazni polja" />
+                                <Button layoutX="34.0" layoutY="27.0" mnemonicParsing="false" onAction="#DodajO" text="Dodaj korisnika" />
+                                <Button layoutX="203.0" layoutY="27.0" mnemonicParsing="false" onAction="#UrediO" text="Uredi" />
+                                <Button layoutX="319.0" layoutY="27.0" mnemonicParsing="false" onAction="#ObrisiO" text="Izbriši" />
+                          <Button layoutX="583.0" layoutY="27.0" mnemonicParsing="false" onAction="#Odjava" text="Odjava" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab onSelectionChanged="#listaKarata1" text="Karta">
+                    <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="555.0" prefWidth="750.0">
+                            <children>
+                                <Label layoutX="94.0" layoutY="81.0" prefHeight="33.0" prefWidth="48.0" text="ID:" textAlignment="LEFT" textFill="#0c2844" textOverrun="CLIP" underline="false">
+                                    <font>
+                                        <Font name="Book Antiqua" size="18.0" />
+                                    </font></Label>
+                                <Label layoutX="330.0" layoutY="82.0" prefHeight="33.0" prefWidth="104.0" text="Polazište:" textFill="#0c2844" underline="false">
+                                    <font>
+                                        <Font name="Book Antiqua" size="18.0" />
+                                    </font></Label>
+                                <Label layoutX="316.0" layoutY="187.0" prefHeight="34.0" prefWidth="116.0" text="Odredište:" textFill="#0c2844" underline="false">
+                                    <font>
+                                        <Font name="Book Antiqua" size="18.0" />
+                                    </font></Label>
+                                <Label layoutX="57.0" layoutY="187.0" prefHeight="33.0" prefWidth="85.0" text="Cijena:" textFill="#0c2844" underline="false">
+                                    <font>
+                                        <Font name="Book Antiqua Bold" size="18.0" />
+                                    </font></Label>
+                                <TextField fx:id="jIdKarteK" layoutX="150.0" layoutY="70.0" prefHeight="54.0" prefWidth="159.0" />
+                                <TextField fx:id="jPolazisteKarteK" layoutX="434.0" layoutY="73.0" prefHeight="51.0" prefWidth="183.0" />
+                                <TextField fx:id="jOdredisteKarteK" layoutX="435.0" layoutY="175.0" prefHeight="57.0" prefWidth="181.0" />
+                                <TextField fx:id="jCijenaKarteK" layoutX="150.0" layoutY="176.0" prefHeight="55.0" prefWidth="160.0" />
+                                <TableView fx:id="KartaR" layoutX="52.0" layoutY="260.0" onMouseClicked="#postaviPodatkeUCelijeR" prefHeight="357.0" prefWidth="593.0">
+                                    <columns>
+                                        <TableColumn fx:id="ColumnIdKarteR" maxWidth="5000.0" minWidth="10.0" prefWidth="60.0" text="ID" />
+                                        <TableColumn fx:id="ColumnPolazisteKarteR" maxWidth="5000.0" minWidth="10.0" prefWidth="150.0" text="Polazište" />
+                                        <TableColumn fx:id="ColumnOdredisteKarteR" maxWidth="5000.0" minWidth="10.0" prefWidth="150.0" text="Odredište" />
+                                        <TableColumn fx:id="ColumnCijenaKarteR" maxWidth="5000.0" minWidth="10.0" prefWidth="120.0" text="Datum" />
+                                    </columns>
+                                </TableView>
+                                <Button layoutX="465.0" layoutY="16.0" mnemonicParsing="false" onAction="#IsprazniPoljaR" prefHeight="26.0" prefWidth="105.0" text="Isprazni odabir" />
+                                <Button layoutX="40.0" layoutY="16.0" mnemonicParsing="false" onAction="#DodajR" prefHeight="26.0" prefWidth="93.0" text="Dodaj" />
+                                <Button layoutX="184.0" layoutY="16.0" mnemonicParsing="false" onAction="#UrediR" prefHeight="26.0" prefWidth="93.0" text="Uredi" />
+                                <Button layoutX="327.0" layoutY="16.0" mnemonicParsing="false" onAction="#ObrisiR" prefHeight="26.0" prefWidth="94.0" text="Izbriši" />
+                                <Button layoutX="609.0" layoutY="17.0" mnemonicParsing="false" onAction="#Odjava" text="Odjava" />
                             </children>
                         </AnchorPane>
                     </content>

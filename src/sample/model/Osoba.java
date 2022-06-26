@@ -14,20 +14,20 @@ public class Osoba {
     private int JMBG;
     private String Email;
     private int Telefon;
-    private String Tip_korisnika;
+    private int type;
     private String Korisnicko_ime;
     private String Lozinka;
 
-    public Osoba(int ID, String Ime, String Prezime, int JMBG, String Email, int Telefon, String Tip_korisnika, String Korisnicko_ime, String Lozinka) {
+    public Osoba(int ID, String name, String surname, int jmbg, String email, int phone_number, int type, String username, String password) {
         this.ID = ID;
-        this.Ime = Ime;
-        this.Prezime = Prezime;
-        this.JMBG = JMBG;
-        this.Email = Email;
-        this.Telefon = Telefon;
-        this.Tip_korisnika=Tip_korisnika;
-        this.Korisnicko_ime = Korisnicko_ime;
-        this.Lozinka = Lozinka;
+        this.Ime = name;
+        this.Prezime = surname;
+        this.JMBG = jmbg;
+        this.Email = email;
+        this.Telefon = phone_number;
+        this.type= type;
+        this.Korisnicko_ime = username;
+        this.Lozinka = password;
     }
 
     public int getID() {
@@ -53,8 +53,8 @@ public class Osoba {
     public int getTelefon() {
         return Telefon;
     }
-    public String getTip_korisnika() {
-        return Tip_korisnika;
+    public int gettype() {
+        return type;
     }
 
     public String getKorisnicko_ime() {
@@ -72,7 +72,7 @@ public class Osoba {
 
         try {
             while (rs.next()) {
-                lista.add(new Osoba(rs.getInt("ID"), rs.getString("Ime"), rs.getString("Prezime"), rs.getInt("JMBG"),  rs.getString("Email"),  rs.getInt("Telefon"),rs.getString("Tip_korisnika"), rs.getString("Korisnicko_ime"),  rs.getString("Lozinka")));
+                lista.add(new Osoba(rs.getInt("ID"), rs.getString("Ime"), rs.getString("Prezime"), rs.getInt("JMBG"),  rs.getString("Email"),  rs.getInt("Telefon"),rs.getInt("type"), rs.getString("Korisnicko_ime"),  rs.getString("Lozinka")));
             }
         } catch (SQLException ex) {
             System.out.println("Nastala je greška prilikom iteriranja: " + ex.getMessage());
